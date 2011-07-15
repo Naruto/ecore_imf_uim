@@ -1,0 +1,4 @@
+$ cd ${E_REPOSITORY} ; git apply ecore_imf_uim/ecore_imf_uim.diff
+or
+$ cd ${E_REPOSITORY}/trunk ; patch -p1 < ecore_imf_uim/ecore_imf_uim.diff
+
