@@ -1,5 +1,5 @@
 diff --git a/ecore/configure.ac b/ecore/configure.ac
-index fd8a328..58bb4de 100644
+index 2880161..eeba785 100644
 --- a/ecore/configure.ac
 +++ b/ecore/configure.ac
 @@ -164,6 +164,7 @@ want_ecore_evas_software_16_wince="no"
@@ -24,9 +24,9 @@ index fd8a328..58bb4de 100644
  requirements_ecore_imf_xim=""
 +requirements_ecore_imf_uim=""
  
- ### Additional options to configure
+ AC_CHECK_DECL([MAXHOSTNAMELEN],[FOUND_MAXHOSTNAMELEN=yes])
  
-@@ -1338,6 +1341,20 @@ fi
+@@ -1400,6 +1403,20 @@ fi
  ECORE_CHECK_MODULE([imf-xim], [${want_ecore_imf}], [Imf_XIM], [${ecore_imf_xim_deps}],
     [requirements_ecore_imf_xim="ecore-imf >= 1.0.0 ecore-x >= 1.0.0 ecore-input >= 1.0.0 ${requirements_ecore_imf_xim}"])
  
@@ -47,7 +47,7 @@ index fd8a328..58bb4de 100644
  ## Graphic systems
  
  # ecore_x{cb}
-@@ -1600,6 +1617,7 @@ AC_SUBST(requirements_ecore_x)
+@@ -1668,6 +1685,7 @@ AC_SUBST(requirements_ecore_x)
  AC_SUBST(requirements_ecore_win32)
  AC_SUBST(requirements_ecore_wince)
  AC_SUBST(requirements_ecore_imf_xim)
@@ -55,7 +55,7 @@ index fd8a328..58bb4de 100644
  
  AC_CONFIG_FILES([
  Makefile
-@@ -1651,6 +1669,7 @@ src/tests/Makefile
+@@ -1719,6 +1737,7 @@ src/tests/Makefile
  src/modules/Makefile
  src/modules/immodules/Makefile
  src/modules/immodules/xim/Makefile
@@ -63,7 +63,7 @@ index fd8a328..58bb4de 100644
  README
  ecore.spec
  $po_makefile_in
-@@ -1705,6 +1724,7 @@ fi
+@@ -1774,6 +1793,7 @@ fi
  #echo "  Ecore_Config.................: $have_ecore_config (deprecated)"
  echo "  Ecore_IMF....................: $have_ecore_imf"
  echo "    XIM........................: $have_ecore_imf_xim"
