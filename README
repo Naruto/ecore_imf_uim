@@ -1,4 +1,21 @@
-$ cd ${E_REPOSITORY} ; git apply ecore_imf_uim/ecore_imf_uim.diff
-or
-$ cd ${E_REPOSITORY}/trunk ; patch -p1 < ecore_imf_uim/ecore_imf_uim.diff
+* What's is this?
+
+  uim module for ecore_imf
+  this project aims to merge this code into uim main trunk. 
+
+* depend on libraries 
+
+  ecore
+  elementary
+  uim
+
+* how to build and clean
+
+  $ ./build.sh
+
+  $ ./clean.sh
+
+* usage
+
+  $ ECORE_IMF_MODULE=uim ./ecore_imf_test
 
