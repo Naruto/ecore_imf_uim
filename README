@@ -19,3 +19,7 @@
 
   $ ECORE_IMF_MODULE=uim ./ecore_imf_test
 
+* TODO
+ - implement candidate window by using elementary.
+ - implement tool bar application by using elementary.
+ - implement im-switcher by using elementary.
